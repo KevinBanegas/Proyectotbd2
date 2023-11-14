@@ -5,6 +5,7 @@
  */
 package proyectotbd2;
 
+import java.util.Random;
 import com.datastax.driver.core.ResultSet;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
@@ -147,7 +148,21 @@ public class DataBase extends javax.swing.JFrame {
         jLabel46 = new javax.swing.JLabel();
         jPanel42 = new javax.swing.JPanel();
         fecha_Matricula = new javax.swing.JTextField();
-        jDialog2 = new javax.swing.JDialog();
+        Examen = new javax.swing.JDialog();
+        jPanel43 = new javax.swing.JPanel();
+        crear_Profesor6 = new javax.swing.JPanel();
+        jLabel48 = new javax.swing.JLabel();
+        jPanel44 = new javax.swing.JPanel();
+        jLabel49 = new javax.swing.JLabel();
+        cbIdEstu_Examen = new javax.swing.JComboBox<>();
+        jLabel50 = new javax.swing.JLabel();
+        cbRep2_Examen = new javax.swing.JComboBox<>();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        cbRep1_Examen = new javax.swing.JComboBox<>();
+        jLabel53 = new javax.swing.JLabel();
+        jPanel45 = new javax.swing.JPanel();
+        fecha_Examen = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -1399,15 +1414,167 @@ public class DataBase extends javax.swing.JFrame {
             .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jDialog2Layout = new javax.swing.GroupLayout(jDialog2.getContentPane());
-        jDialog2.getContentPane().setLayout(jDialog2Layout);
-        jDialog2Layout.setHorizontalGroup(
-            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        jPanel43.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel43.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        crear_Profesor6.setBackground(new java.awt.Color(0, 102, 102));
+        crear_Profesor6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                crear_Profesor6MouseClicked(evt);
+            }
+        });
+
+        jLabel48.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel48.setText("E N T R E G A R");
+        jLabel48.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel48MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel48MouseEntered(evt);
+            }
+        });
+
+        javax.swing.GroupLayout crear_Profesor6Layout = new javax.swing.GroupLayout(crear_Profesor6);
+        crear_Profesor6.setLayout(crear_Profesor6Layout);
+        crear_Profesor6Layout.setHorizontalGroup(
+            crear_Profesor6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(crear_Profesor6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
-        jDialog2Layout.setVerticalGroup(
-            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        crear_Profesor6Layout.setVerticalGroup(
+            crear_Profesor6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel48, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        jPanel43.add(crear_Profesor6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, 240, 30));
+
+        jPanel44.setBackground(new java.awt.Color(0, 102, 102));
+
+        jLabel49.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel49.setText("E X A M E N");
+
+        javax.swing.GroupLayout jPanel44Layout = new javax.swing.GroupLayout(jPanel44);
+        jPanel44.setLayout(jPanel44Layout);
+        jPanel44Layout.setHorizontalGroup(
+            jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel44Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel49, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel44Layout.setVerticalGroup(
+            jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel49, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        jPanel43.add(jPanel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 240, 50));
+
+        cbIdEstu_Examen.setBackground(new java.awt.Color(0, 102, 102));
+        cbIdEstu_Examen.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
+        cbIdEstu_Examen.setForeground(new java.awt.Color(204, 255, 255));
+        cbIdEstu_Examen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbIdEstu_ExamenActionPerformed(evt);
+            }
+        });
+        jPanel43.add(cbIdEstu_Examen, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 190, 40));
+
+        jLabel50.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel50.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel50.setText("PARA QUE SON LAS LUCES INTERMITENTES?");
+        jPanel43.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 410, 30));
+
+        cbRep2_Examen.setBackground(new java.awt.Color(0, 102, 102));
+        cbRep2_Examen.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
+        cbRep2_Examen.setForeground(new java.awt.Color(204, 255, 255));
+        cbRep2_Examen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Girar", "Para cambiar de carril", "Para hacer una parada", "Para adelantar", "Todos" }));
+        cbRep2_Examen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbRep2_ExamenActionPerformed(evt);
+            }
+        });
+        jPanel43.add(cbRep2_Examen, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, 190, 40));
+
+        jLabel51.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel51.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel51.setText("F E C H A");
+        jPanel43.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 180, 30));
+
+        jLabel52.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel52.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel52.setText("QUE SE HACE ANTES DE ENTRAR A OTRA CALLE?");
+        jPanel43.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 410, 30));
+
+        cbRep1_Examen.setBackground(new java.awt.Color(0, 102, 102));
+        cbRep1_Examen.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
+        cbRep1_Examen.setForeground(new java.awt.Color(204, 255, 255));
+        cbRep1_Examen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Vira a la Derecha", "Acelerar", "Mirar a Ambos Lados" }));
+        cbRep1_Examen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbRep1_ExamenActionPerformed(evt);
+            }
+        });
+        jPanel43.add(cbRep1_Examen, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 190, 40));
+
+        jLabel53.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel53.setText("I D   E S T U D I A N T E");
+        jPanel43.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 190, 30));
+
+        jPanel45.setBackground(new java.awt.Color(0, 102, 102));
+
+        fecha_Examen.setBackground(new java.awt.Color(0, 102, 102));
+        fecha_Examen.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
+        fecha_Examen.setForeground(new java.awt.Color(204, 255, 255));
+        fecha_Examen.setBorder(null);
+        fecha_Examen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fecha_ExamenActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
+        jPanel45.setLayout(jPanel45Layout);
+        jPanel45Layout.setHorizontalGroup(
+            jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel45Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(fecha_Examen, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+        jPanel45Layout.setVerticalGroup(
+            jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel45Layout.createSequentialGroup()
+                .addComponent(fecha_Examen, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel43.add(jPanel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, -1, -1));
+
+        javax.swing.GroupLayout ExamenLayout = new javax.swing.GroupLayout(Examen.getContentPane());
+        Examen.getContentPane().setLayout(ExamenLayout);
+        ExamenLayout.setHorizontalGroup(
+            ExamenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ExamenLayout.createSequentialGroup()
+                .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        ExamenLayout.setVerticalGroup(
+            ExamenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ExamenLayout.createSequentialGroup()
+                .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1592,6 +1759,11 @@ public class DataBase extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(204, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("E X A M E N");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -2022,6 +2194,11 @@ public class DataBase extends javax.swing.JFrame {
 
     private void jLabel31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel31MouseClicked
         db.Delete("profesor", Integer.parseInt(cbElim_prof.getSelectedItem().toString()));
+        try{
+        db.Delete("vehiculo", Integer.parseInt(cbElim_prof.getSelectedItem().toString()));
+        }catch(Exception e){
+            
+        }
         JOptionPane.showMessageDialog(this, "Profesor Eliminado");
         ActualizarCB();
     }//GEN-LAST:event_jLabel31MouseClicked
@@ -2085,7 +2262,10 @@ public class DataBase extends javax.swing.JFrame {
 
     private void jLabel39MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel39MouseClicked
         db.Delete("alumno", Integer.parseInt(cbElim_estu.getSelectedItem().toString()));
+        db.ElimMatricula(Integer.parseInt(cbElim_estu.getSelectedItem().toString()));
+        db.ElimExamen(Integer.parseInt(cbElim_estu.getSelectedItem().toString()));
         JOptionPane.showMessageDialog(this, "Alumno Eliminado");
+        
         ActualizarCB();
     }//GEN-LAST:event_jLabel39MouseClicked
 
@@ -2137,6 +2317,59 @@ public class DataBase extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_modificarMouseClicked
 
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        ActualizarCB();
+        Examen.pack();
+        Examen.setLocationRelativeTo(this);
+        Examen.setModal(true);
+        Examen.setVisible(true);
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel48MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel48MouseClicked
+        Random rand = new Random();
+   
+        // Generate random integers in range 0 to 999
+        int rand_int1 = rand.nextInt(100000);
+        int puntaje =0;
+        if(cbRep1_Examen.getSelectedIndex()==2 && cbRep2_Examen.getSelectedIndex() == 4){
+            puntaje =100;
+        }else if(cbRep1_Examen.getSelectedIndex()==2 || cbRep2_Examen.getSelectedIndex() == 4){
+            puntaje=50;
+        }
+        
+        ArrayList<Object> values = new ArrayList();
+        values.add(rand_int1);
+        values.add(fecha_Examen.getText());
+        values.add(Integer.parseInt(cbIdEstu_Examen.getSelectedItem().toString()));
+        values.add(puntaje);
+        db.Insert(values, "examen");
+        JOptionPane.showMessageDialog(this, "Examen Realizado");
+    }//GEN-LAST:event_jLabel48MouseClicked
+
+    private void jLabel48MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel48MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel48MouseEntered
+
+    private void crear_Profesor6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crear_Profesor6MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_crear_Profesor6MouseClicked
+
+    private void cbRep2_ExamenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbRep2_ExamenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbRep2_ExamenActionPerformed
+
+    private void cbIdEstu_ExamenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbIdEstu_ExamenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbIdEstu_ExamenActionPerformed
+
+    private void cbRep1_ExamenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbRep1_ExamenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbRep1_ExamenActionPerformed
+
+    private void fecha_ExamenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fecha_ExamenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fecha_ExamenActionPerformed
+
     public DefaultTableModel TraerTabla(ResultSet rs) {
         DefaultTableModel model = new DefaultTableModel();
         try {
@@ -2163,15 +2396,26 @@ public class DataBase extends javax.swing.JFrame {
         ResultSet alum = db.Select("alumno");
         ResultSet lice = db.Select("licencia");
         ResultSet vehi = db.Select("vehiculo");
+        ResultSet matri = db.Select("matricula");
         ArrayList<Object> idProf = new ArrayList();
         ArrayList<Object> idVehi = new ArrayList();
-
+        ArrayList<Object> idEstu = new ArrayList();
+        ArrayList<Object> idMatri = new ArrayList();
+        
+        
         DefaultComboBoxModel cbCulero = new DefaultComboBoxModel();
         DefaultComboBoxModel cbModVehi = new DefaultComboBoxModel();
         DefaultComboBoxModel cbModLice = new DefaultComboBoxModel();
         DefaultComboBoxModel cbModProf = new DefaultComboBoxModel();
         DefaultComboBoxModel cbModEstu = new DefaultComboBoxModel();
+        DefaultComboBoxModel cbCulero2 = new DefaultComboBoxModel();
         try {
+            //M A T R I C U L A
+            matri.forEach(rr -> {
+                idMatri.add(rr.getObject(0).toString());
+            }
+            );
+            
             //V E H I C U L O
             vehi.forEach(rr -> {
                 cbModVehi.addElement(rr.getObject(0).toString());
@@ -2197,11 +2441,19 @@ public class DataBase extends javax.swing.JFrame {
 
             //A L U M N O
             alum.forEach(rr -> {
+                idEstu.add(rr.getObject(0).toString());
                 cbModEstu.addElement(rr.getObject(0));
             }
             );
             cbElim_estu.setModel(cbModEstu);
             cbIdEstu_Matricula.setModel(cbModEstu);
+            cbIdEstu_Examen.setModel(cbModEstu);
+            
+            ArrayList<Object> Disponibles2 = getArrayListDifference(idEstu, idMatri);
+            for (Object Disponible : Disponibles2) {
+                cbCulero2.addElement(Disponible);
+            }
+            cbIdEstu_Matricula.setModel(cbCulero2);
 
             //L I C E N C I A
             lice.forEach(rr -> {
@@ -2228,6 +2480,10 @@ public class DataBase extends javax.swing.JFrame {
         }
 
         return difference;
+    }
+    
+    public void HardReset(){
+        
     }
 
     /**
@@ -2271,6 +2527,7 @@ public class DataBase extends javax.swing.JFrame {
     private javax.swing.JDialog ELIMLic;
     private javax.swing.JDialog ELIMProf;
     private javax.swing.JDialog ELIMVehi;
+    private javax.swing.JDialog Examen;
     private javax.swing.JDialog INSEstu;
     private javax.swing.JDialog INSLic;
     private javax.swing.JDialog INSProf;
@@ -2286,12 +2543,15 @@ public class DataBase extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbElim_lice;
     private javax.swing.JComboBox<String> cbElim_prof;
     private javax.swing.JComboBox<String> cbElim_vehi;
+    private javax.swing.JComboBox<String> cbIdEstu_Examen;
     private javax.swing.JComboBox<String> cbIdEstu_Matricula;
     private javax.swing.JComboBox<String> cbIdProf_Matricula;
     private javax.swing.JComboBox<String> cbLic_estudiante;
     private javax.swing.JComboBox<String> cbLic_vehiculo;
     private javax.swing.JComboBox<String> cbProf_estudiante;
     private javax.swing.JComboBox<String> cbProf_vehiculo;
+    private javax.swing.JComboBox<String> cbRep1_Examen;
+    private javax.swing.JComboBox<String> cbRep2_Examen;
     private javax.swing.JComboBox<String> cb_tablas;
     private javax.swing.JTextField coste_vehiculo;
     private javax.swing.JPanel crear_Estudiante;
@@ -2302,14 +2562,15 @@ public class DataBase extends javax.swing.JFrame {
     private javax.swing.JPanel crear_Profesor3;
     private javax.swing.JPanel crear_Profesor4;
     private javax.swing.JPanel crear_Profesor5;
+    private javax.swing.JPanel crear_Profesor6;
     private javax.swing.JPanel crear_Vehiculo;
     private javax.swing.JLabel eliminar;
+    private javax.swing.JTextField fecha_Examen;
     private javax.swing.JTextField fecha_Matricula;
     private javax.swing.JTextField id_Matricula;
     private javax.swing.JTextField id_estudiante;
     private javax.swing.JTextField id_profesor;
     private javax.swing.JLabel insertar;
-    private javax.swing.JDialog jDialog2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -2350,7 +2611,13 @@ public class DataBase extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -2392,6 +2659,9 @@ public class DataBase extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel40;
     private javax.swing.JPanel jPanel41;
     private javax.swing.JPanel jPanel42;
+    private javax.swing.JPanel jPanel43;
+    private javax.swing.JPanel jPanel44;
+    private javax.swing.JPanel jPanel45;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;

@@ -110,4 +110,34 @@ public class DbConnector {
         BoundStatement bs = ps.bind();
         session.execute(bs);
     }
+
+    public void ElimMatricula(int id) {
+        String x = "SELECT id FROM autoescuela_keyspace.matricula WHERE id_alumno = " + id+ " ALLOW FILTERING";
+        
+        PreparedStatement ps = session.prepare(x);
+        BoundStatement bs = ps.bind();
+        ResultSet rs = session.execute(bs);
+        rs.forEach(rr -> {
+            String selectQuery = "DELETE FROM autoescuela_keyspace.matricula WHERE id = " + rr.getInt(0);
+            PreparedStatement ps1 = session.prepare(selectQuery);
+            BoundStatement bs1 = ps1.bind();
+            session.execute(bs1);
+        }
+        );
+    }
+    
+    public void ElimExamen(int id){
+        String x = "SELECT id FROM autoescuela_keyspace.examen WHERE id_alumno = " + id+ " ALLOW FILTERING";
+        
+        PreparedStatement ps = session.prepare(x);
+        BoundStatement bs = ps.bind();
+        ResultSet rs = session.execute(bs);
+        rs.forEach(rr -> {
+            String selectQuery = "DELETE FROM autoescuela_keyspace.examen WHERE id = " + rr.getInt(0);
+            PreparedStatement ps1 = session.prepare(selectQuery);
+            BoundStatement bs1 = ps1.bind();
+            session.execute(bs1);
+        }
+        );
+    }
 }
