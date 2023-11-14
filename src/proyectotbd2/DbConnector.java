@@ -140,4 +140,49 @@ public class DbConnector {
         }
         );
     }
+    
+    public void ElimConsumoAlumno(int id){
+        String x = "SELECT id_alumno FROM autoescuela_keyspace.consumovehiculo WHERE id_alumno = " + id+ " ALLOW FILTERING";
+        
+        PreparedStatement ps = session.prepare(x);
+        BoundStatement bs = ps.bind();
+        ResultSet rs = session.execute(bs);
+        rs.forEach(rr -> {
+            String selectQuery = "DELETE FROM autoescuela_keyspace.consumovehiculo WHERE id_alumno = " + rr.getInt(0);
+            PreparedStatement ps1 = session.prepare(selectQuery);
+            BoundStatement bs1 = ps1.bind();
+            session.execute(bs1);
+        }
+        );
+    }
+    
+    public void ElimConsumoVehiculo(int id){
+        String x = "SELECT id_vehiculo FROM autoescuela_keyspace.consumovehiculo WHERE id_vehiculo = " + id+ " ALLOW FILTERING";
+        
+        PreparedStatement ps = session.prepare(x);
+        BoundStatement bs = ps.bind();
+        ResultSet rs = session.execute(bs);
+        rs.forEach(rr -> {
+            String selectQuery = "DELETE FROM autoescuela_keyspace.consumovehiculo WHERE id_vehiculo = " + rr.getInt(0);
+            PreparedStatement ps1 = session.prepare(selectQuery);
+            BoundStatement bs1 = ps1.bind();
+            session.execute(bs1);
+        }
+        );
+    }
+    
+    public void ElimDoc(String id){
+        String x = "SELECT tipo_doc FROM autoescuela_keyspace.documentacion WHERE tipo_lic = '" + id + "' ALLOW FILTERING";
+        
+        PreparedStatement ps = session.prepare(x);
+        BoundStatement bs = ps.bind();
+        ResultSet rs = session.execute(bs);
+        rs.forEach(rr -> {
+            String selectQuery = "DELETE FROM autoescuela_keyspace.documentacion WHERE tipo_doc = '" + rr.getString(0) + "'";
+            PreparedStatement ps1 = session.prepare(selectQuery);
+            BoundStatement bs1 = ps1.bind();
+            session.execute(bs1);
+        }
+        );
+    }
 }

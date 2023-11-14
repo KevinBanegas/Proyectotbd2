@@ -25,7 +25,7 @@ public class DataBase extends javax.swing.JFrame {
         initComponents();
         db = new DbConnector();
         db.Connect("localhost", 9042);
-        jTable1.setModel(TraerTabla(db.Select("profesor")));
+        tablas.setModel(TraerTabla(db.Select("profesor")));
     }
 
     /**
@@ -129,9 +129,57 @@ public class DataBase extends javax.swing.JFrame {
         jLabel40 = new javax.swing.JLabel();
         cbElim_estu = new javax.swing.JComboBox<>();
         MODProf = new javax.swing.JDialog();
+        jPanel46 = new javax.swing.JPanel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        mod_Profesor = new javax.swing.JPanel();
+        modificar_prof = new javax.swing.JLabel();
+        jPanel47 = new javax.swing.JPanel();
+        jLabel55 = new javax.swing.JLabel();
+        jPanel48 = new javax.swing.JPanel();
+        id_profesor1 = new javax.swing.JTextField();
+        jPanel49 = new javax.swing.JPanel();
+        nombre_profesor1 = new javax.swing.JTextField();
+        jPanel50 = new javax.swing.JPanel();
+        apellido_profesor1 = new javax.swing.JTextField();
         MODVehi = new javax.swing.JDialog();
+        jPanel51 = new javax.swing.JPanel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        modificar_vehiculo1 = new javax.swing.JPanel();
+        modificarVehi = new javax.swing.JLabel();
+        jPanel52 = new javax.swing.JPanel();
+        jLabel60 = new javax.swing.JLabel();
+        jPanel53 = new javax.swing.JPanel();
+        id_vehiculo1 = new javax.swing.JTextField();
+        jPanel54 = new javax.swing.JPanel();
+        coste_vehiculo1 = new javax.swing.JTextField();
+        cbModLic_vehiculo = new javax.swing.JComboBox<>();
         MODLic = new javax.swing.JDialog();
         MODEstu = new javax.swing.JDialog();
+        jPanel55 = new javax.swing.JPanel();
+        jLabel59 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        crear_Estudiante1 = new javax.swing.JPanel();
+        jLabel63 = new javax.swing.JLabel();
+        jPanel56 = new javax.swing.JPanel();
+        jLabel64 = new javax.swing.JLabel();
+        jPanel57 = new javax.swing.JPanel();
+        id_estudiante1 = new javax.swing.JTextField();
+        jPanel58 = new javax.swing.JPanel();
+        nombre_estudiante1 = new javax.swing.JTextField();
+        jPanel59 = new javax.swing.JPanel();
+        apellido_estudiante1 = new javax.swing.JTextField();
+        cbLic_estudianteMod = new javax.swing.JComboBox<>();
+        cbProf_estudianteMod = new javax.swing.JComboBox<>();
+        jLabel65 = new javax.swing.JLabel();
+        jPanel60 = new javax.swing.JPanel();
+        pago_estudiante1 = new javax.swing.JTextField();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
         Matricular = new javax.swing.JDialog();
         jPanel39 = new javax.swing.JPanel();
         jLabel41 = new javax.swing.JLabel();
@@ -163,6 +211,30 @@ public class DataBase extends javax.swing.JFrame {
         jLabel53 = new javax.swing.JLabel();
         jPanel45 = new javax.swing.JPanel();
         fecha_Examen = new javax.swing.JTextField();
+        Kilometros = new javax.swing.JDialog();
+        jPanel61 = new javax.swing.JPanel();
+        jLabel68 = new javax.swing.JLabel();
+        crear_Profesor7 = new javax.swing.JPanel();
+        jLabel69 = new javax.swing.JLabel();
+        jPanel62 = new javax.swing.JPanel();
+        jLabel70 = new javax.swing.JLabel();
+        cbIdEstu_Kilo = new javax.swing.JComboBox<>();
+        jLabel71 = new javax.swing.JLabel();
+        cbIdProf_Kilo = new javax.swing.JComboBox<>();
+        jLabel72 = new javax.swing.JLabel();
+        jPanel63 = new javax.swing.JPanel();
+        kilometrosText = new javax.swing.JTextField();
+        INSDoc = new javax.swing.JDialog();
+        jPanel64 = new javax.swing.JPanel();
+        jLabel75 = new javax.swing.JLabel();
+        crear_Estudiante2 = new javax.swing.JPanel();
+        jLabel76 = new javax.swing.JLabel();
+        jPanel65 = new javax.swing.JPanel();
+        jLabel77 = new javax.swing.JLabel();
+        jPanel66 = new javax.swing.JPanel();
+        nombre_doc = new javax.swing.JTextField();
+        cbLic_doc = new javax.swing.JComboBox<>();
+        jLabel79 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -183,7 +255,7 @@ public class DataBase extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablas = new javax.swing.JTable();
         jPanel5 = new javax.swing.JPanel();
         nombreTabla = new javax.swing.JLabel();
         cb_tablas = new javax.swing.JComboBox<>();
@@ -411,7 +483,7 @@ public class DataBase extends javax.swing.JFrame {
         );
         crear_VehiculoLayout.setVerticalGroup(
             crear_VehiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 30, Short.MAX_VALUE)
         );
 
         jPanel17.add(crear_Vehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, 130, 30));
@@ -536,7 +608,7 @@ public class DataBase extends javax.swing.JFrame {
         );
         crear_LicenciaLayout.setVerticalGroup(
             crear_LicenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+            .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 30, Short.MAX_VALUE)
         );
 
         jPanel20.add(crear_Licencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, 130, 30));
@@ -651,7 +723,7 @@ public class DataBase extends javax.swing.JFrame {
         );
         crear_EstudianteLayout.setVerticalGroup(
             crear_EstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+            .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 30, Short.MAX_VALUE)
         );
 
         jPanel30.add(crear_Estudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 130, 30));
@@ -669,7 +741,7 @@ public class DataBase extends javax.swing.JFrame {
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel32Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 206, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel32Layout.setVerticalGroup(
@@ -956,6 +1028,9 @@ public class DataBase extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel33MouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel33MouseEntered(evt);
+            }
         });
 
         javax.swing.GroupLayout crear_Profesor2Layout = new javax.swing.GroupLayout(crear_Profesor2);
@@ -1162,7 +1237,7 @@ public class DataBase extends javax.swing.JFrame {
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel38Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 206, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel38Layout.setVerticalGroup(
@@ -1193,26 +1268,340 @@ public class DataBase extends javax.swing.JFrame {
             .addComponent(jPanel37, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
         );
 
+        jPanel46.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel46.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel28.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel28.setText("A P E L L I D O");
+        jPanel46.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 140, 30));
+
+        jLabel47.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel47.setText("I D");
+        jPanel46.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 100, 30));
+
+        jLabel54.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel54.setText("N O M B R E");
+        jPanel46.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 110, 30));
+
+        mod_Profesor.setBackground(new java.awt.Color(0, 102, 102));
+        mod_Profesor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mod_ProfesorMouseClicked(evt);
+            }
+        });
+
+        modificar_prof.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
+        modificar_prof.setForeground(new java.awt.Color(204, 255, 255));
+        modificar_prof.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        modificar_prof.setText("MODIFICAR");
+        modificar_prof.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                modificar_profMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout mod_ProfesorLayout = new javax.swing.GroupLayout(mod_Profesor);
+        mod_Profesor.setLayout(mod_ProfesorLayout);
+        mod_ProfesorLayout.setHorizontalGroup(
+            mod_ProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mod_ProfesorLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(modificar_prof, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        mod_ProfesorLayout.setVerticalGroup(
+            mod_ProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(modificar_prof, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        jPanel46.add(mod_Profesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 340, 150, 30));
+
+        jPanel47.setBackground(new java.awt.Color(0, 102, 102));
+
+        jLabel55.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel55.setText("P R O F E S O R");
+
+        javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
+        jPanel47.setLayout(jPanel47Layout);
+        jPanel47Layout.setHorizontalGroup(
+            jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel47Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel55, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel47Layout.setVerticalGroup(
+            jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel55, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        jPanel46.add(jPanel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 230, 50));
+
+        jPanel48.setBackground(new java.awt.Color(0, 102, 102));
+
+        id_profesor1.setEditable(false);
+        id_profesor1.setBackground(new java.awt.Color(0, 102, 102));
+        id_profesor1.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
+        id_profesor1.setForeground(new java.awt.Color(204, 255, 255));
+        id_profesor1.setBorder(null);
+        id_profesor1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                id_profesor1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel48Layout = new javax.swing.GroupLayout(jPanel48);
+        jPanel48.setLayout(jPanel48Layout);
+        jPanel48Layout.setHorizontalGroup(
+            jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel48Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(id_profesor1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+        jPanel48Layout.setVerticalGroup(
+            jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel48Layout.createSequentialGroup()
+                .addComponent(id_profesor1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel46.add(jPanel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 180, 40));
+
+        jPanel49.setBackground(new java.awt.Color(0, 102, 102));
+
+        nombre_profesor1.setBackground(new java.awt.Color(0, 102, 102));
+        nombre_profesor1.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
+        nombre_profesor1.setForeground(new java.awt.Color(204, 255, 255));
+        nombre_profesor1.setBorder(null);
+        nombre_profesor1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nombre_profesor1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel49Layout = new javax.swing.GroupLayout(jPanel49);
+        jPanel49.setLayout(jPanel49Layout);
+        jPanel49Layout.setHorizontalGroup(
+            jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel49Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(nombre_profesor1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+        jPanel49Layout.setVerticalGroup(
+            jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel49Layout.createSequentialGroup()
+                .addComponent(nombre_profesor1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel46.add(jPanel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, -1));
+
+        jPanel50.setBackground(new java.awt.Color(0, 102, 102));
+
+        apellido_profesor1.setBackground(new java.awt.Color(0, 102, 102));
+        apellido_profesor1.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
+        apellido_profesor1.setForeground(new java.awt.Color(204, 255, 255));
+        apellido_profesor1.setBorder(null);
+        apellido_profesor1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                apellido_profesor1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel50Layout = new javax.swing.GroupLayout(jPanel50);
+        jPanel50.setLayout(jPanel50Layout);
+        jPanel50Layout.setHorizontalGroup(
+            jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel50Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(apellido_profesor1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+        jPanel50Layout.setVerticalGroup(
+            jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel50Layout.createSequentialGroup()
+                .addComponent(apellido_profesor1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel46.add(jPanel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
+
         javax.swing.GroupLayout MODProfLayout = new javax.swing.GroupLayout(MODProf.getContentPane());
         MODProf.getContentPane().setLayout(MODProfLayout);
         MODProfLayout.setHorizontalGroup(
             MODProfLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         MODProfLayout.setVerticalGroup(
             MODProfLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(MODProfLayout.createSequentialGroup()
+                .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        jPanel51.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel51.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel56.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel56.setText("C O S T E");
+        jPanel51.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 140, 30));
+
+        jLabel57.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel57.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel57.setText("I D");
+        jPanel51.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 100, 30));
+
+        jLabel58.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel58.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel58.setText("L I C E N C I A");
+        jPanel51.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 110, 30));
+
+        modificar_vehiculo1.setBackground(new java.awt.Color(0, 102, 102));
+        modificar_vehiculo1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                modificar_vehiculo1MouseClicked(evt);
+            }
+        });
+
+        modificarVehi.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
+        modificarVehi.setForeground(new java.awt.Color(204, 255, 255));
+        modificarVehi.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        modificarVehi.setText("MODIFICAR");
+        modificarVehi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                modificarVehiMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout modificar_vehiculo1Layout = new javax.swing.GroupLayout(modificar_vehiculo1);
+        modificar_vehiculo1.setLayout(modificar_vehiculo1Layout);
+        modificar_vehiculo1Layout.setHorizontalGroup(
+            modificar_vehiculo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(modificar_vehiculo1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(modificarVehi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(87, 87, 87))
+        );
+        modificar_vehiculo1Layout.setVerticalGroup(
+            modificar_vehiculo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(modificarVehi, javax.swing.GroupLayout.PREFERRED_SIZE, 30, Short.MAX_VALUE)
+        );
+
+        jPanel51.add(modificar_vehiculo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 150, 30));
+
+        jPanel52.setBackground(new java.awt.Color(0, 102, 102));
+
+        jLabel60.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
+        jLabel60.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel60.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel60.setText("V E H I C U L O");
+
+        javax.swing.GroupLayout jPanel52Layout = new javax.swing.GroupLayout(jPanel52);
+        jPanel52.setLayout(jPanel52Layout);
+        jPanel52Layout.setHorizontalGroup(
+            jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel52Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel60, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel52Layout.setVerticalGroup(
+            jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel60, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        jPanel51.add(jPanel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 230, 50));
+
+        jPanel53.setBackground(new java.awt.Color(0, 102, 102));
+
+        id_vehiculo1.setEditable(false);
+        id_vehiculo1.setBackground(new java.awt.Color(0, 102, 102));
+        id_vehiculo1.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
+        id_vehiculo1.setForeground(new java.awt.Color(204, 255, 255));
+        id_vehiculo1.setBorder(null);
+        id_vehiculo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                id_vehiculo1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel53Layout = new javax.swing.GroupLayout(jPanel53);
+        jPanel53.setLayout(jPanel53Layout);
+        jPanel53Layout.setHorizontalGroup(
+            jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel53Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(id_vehiculo1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+        jPanel53Layout.setVerticalGroup(
+            jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel53Layout.createSequentialGroup()
+                .addComponent(id_vehiculo1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel51.add(jPanel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, -1, -1));
+
+        jPanel54.setBackground(new java.awt.Color(0, 102, 102));
+
+        coste_vehiculo1.setBackground(new java.awt.Color(0, 102, 102));
+        coste_vehiculo1.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
+        coste_vehiculo1.setForeground(new java.awt.Color(204, 255, 255));
+        coste_vehiculo1.setBorder(null);
+        coste_vehiculo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                coste_vehiculo1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel54Layout = new javax.swing.GroupLayout(jPanel54);
+        jPanel54.setLayout(jPanel54Layout);
+        jPanel54Layout.setHorizontalGroup(
+            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel54Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(coste_vehiculo1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+        jPanel54Layout.setVerticalGroup(
+            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel54Layout.createSequentialGroup()
+                .addComponent(coste_vehiculo1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel51.add(jPanel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
+
+        cbModLic_vehiculo.setBackground(new java.awt.Color(0, 102, 102));
+        cbModLic_vehiculo.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
+        cbModLic_vehiculo.setForeground(new java.awt.Color(204, 255, 255));
+        cbModLic_vehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbModLic_vehiculoActionPerformed(evt);
+            }
+        });
+        jPanel51.add(cbModLic_vehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 180, 40));
 
         javax.swing.GroupLayout MODVehiLayout = new javax.swing.GroupLayout(MODVehi.getContentPane());
         MODVehi.getContentPane().setLayout(MODVehiLayout);
         MODVehiLayout.setHorizontalGroup(
             MODVehiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         MODVehiLayout.setVerticalGroup(
             MODVehiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(MODVehiLayout.createSequentialGroup()
+                .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout MODLicLayout = new javax.swing.GroupLayout(MODLic.getContentPane());
@@ -1226,15 +1615,245 @@ public class DataBase extends javax.swing.JFrame {
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
+        jPanel55.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel55.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel59.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel59.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel59.setText("A P E L L I D O ");
+        jPanel55.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 140, 30));
+
+        jLabel61.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel61.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel61.setText("P R O F E S O R");
+        jPanel55.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 130, 30));
+
+        jLabel62.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel62.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel62.setText("L I C E N C I A");
+        jPanel55.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, 130, 30));
+
+        crear_Estudiante1.setBackground(new java.awt.Color(0, 102, 102));
+        crear_Estudiante1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                crear_Estudiante1MouseClicked(evt);
+            }
+        });
+
+        jLabel63.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
+        jLabel63.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel63.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel63.setText("MODIFICAR");
+        jLabel63.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel63MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout crear_Estudiante1Layout = new javax.swing.GroupLayout(crear_Estudiante1);
+        crear_Estudiante1.setLayout(crear_Estudiante1Layout);
+        crear_Estudiante1Layout.setHorizontalGroup(
+            crear_Estudiante1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(crear_Estudiante1Layout.createSequentialGroup()
+                .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 2, Short.MAX_VALUE))
+        );
+        crear_Estudiante1Layout.setVerticalGroup(
+            crear_Estudiante1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 30, Short.MAX_VALUE)
+        );
+
+        jPanel55.add(crear_Estudiante1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 360, 140, 30));
+
+        jPanel56.setBackground(new java.awt.Color(0, 102, 102));
+
+        jLabel64.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
+        jLabel64.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel64.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel64.setText("E S T U D I A N T E");
+
+        javax.swing.GroupLayout jPanel56Layout = new javax.swing.GroupLayout(jPanel56);
+        jPanel56.setLayout(jPanel56Layout);
+        jPanel56Layout.setHorizontalGroup(
+            jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel56Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel64, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel56Layout.setVerticalGroup(
+            jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel64, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        jPanel55.add(jPanel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 230, 50));
+
+        jPanel57.setBackground(new java.awt.Color(0, 102, 102));
+
+        id_estudiante1.setEditable(false);
+        id_estudiante1.setBackground(new java.awt.Color(0, 102, 102));
+        id_estudiante1.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
+        id_estudiante1.setForeground(new java.awt.Color(204, 255, 255));
+        id_estudiante1.setBorder(null);
+        id_estudiante1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                id_estudiante1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel57Layout = new javax.swing.GroupLayout(jPanel57);
+        jPanel57.setLayout(jPanel57Layout);
+        jPanel57Layout.setHorizontalGroup(
+            jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel57Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(id_estudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+        jPanel57Layout.setVerticalGroup(
+            jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel57Layout.createSequentialGroup()
+                .addComponent(id_estudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel55.add(jPanel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 180, 40));
+
+        jPanel58.setBackground(new java.awt.Color(0, 102, 102));
+
+        nombre_estudiante1.setBackground(new java.awt.Color(0, 102, 102));
+        nombre_estudiante1.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
+        nombre_estudiante1.setForeground(new java.awt.Color(204, 255, 255));
+        nombre_estudiante1.setBorder(null);
+        nombre_estudiante1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nombre_estudiante1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel58Layout = new javax.swing.GroupLayout(jPanel58);
+        jPanel58.setLayout(jPanel58Layout);
+        jPanel58Layout.setHorizontalGroup(
+            jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel58Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(nombre_estudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+        jPanel58Layout.setVerticalGroup(
+            jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel58Layout.createSequentialGroup()
+                .addComponent(nombre_estudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel55.add(jPanel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, -1));
+
+        jPanel59.setBackground(new java.awt.Color(0, 102, 102));
+
+        apellido_estudiante1.setBackground(new java.awt.Color(0, 102, 102));
+        apellido_estudiante1.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
+        apellido_estudiante1.setForeground(new java.awt.Color(204, 255, 255));
+        apellido_estudiante1.setBorder(null);
+        apellido_estudiante1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                apellido_estudiante1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel59Layout = new javax.swing.GroupLayout(jPanel59);
+        jPanel59.setLayout(jPanel59Layout);
+        jPanel59Layout.setHorizontalGroup(
+            jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel59Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(apellido_estudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+        jPanel59Layout.setVerticalGroup(
+            jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel59Layout.createSequentialGroup()
+                .addComponent(apellido_estudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel55.add(jPanel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
+
+        cbLic_estudianteMod.setBackground(new java.awt.Color(0, 102, 102));
+        cbLic_estudianteMod.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
+        cbLic_estudianteMod.setForeground(new java.awt.Color(204, 255, 255));
+        cbLic_estudianteMod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbLic_estudianteModActionPerformed(evt);
+            }
+        });
+        jPanel55.add(cbLic_estudianteMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 190, 40));
+
+        cbProf_estudianteMod.setBackground(new java.awt.Color(0, 102, 102));
+        cbProf_estudianteMod.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
+        cbProf_estudianteMod.setForeground(new java.awt.Color(204, 255, 255));
+        cbProf_estudianteMod.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        cbProf_estudianteMod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbProf_estudianteModActionPerformed(evt);
+            }
+        });
+        jPanel55.add(cbProf_estudianteMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 120, 190, 40));
+
+        jLabel65.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel65.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel65.setText("P A G O");
+        jPanel55.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 110, 30));
+
+        jPanel60.setBackground(new java.awt.Color(0, 102, 102));
+
+        pago_estudiante1.setBackground(new java.awt.Color(0, 102, 102));
+        pago_estudiante1.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
+        pago_estudiante1.setForeground(new java.awt.Color(204, 255, 255));
+        pago_estudiante1.setBorder(null);
+        pago_estudiante1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pago_estudiante1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel60Layout = new javax.swing.GroupLayout(jPanel60);
+        jPanel60.setLayout(jPanel60Layout);
+        jPanel60Layout.setHorizontalGroup(
+            jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel60Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pago_estudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+        jPanel60Layout.setVerticalGroup(
+            jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel60Layout.createSequentialGroup()
+                .addComponent(pago_estudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel55.add(jPanel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, 190, -1));
+
+        jLabel66.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel66.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel66.setText("I D");
+        jPanel55.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 100, 30));
+
+        jLabel67.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel67.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel67.setText("N O M B R E");
+        jPanel55.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 110, 30));
+
         javax.swing.GroupLayout MODEstuLayout = new javax.swing.GroupLayout(MODEstu.getContentPane());
         MODEstu.getContentPane().setLayout(MODEstuLayout);
         MODEstuLayout.setHorizontalGroup(
             MODEstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel55, javax.swing.GroupLayout.DEFAULT_SIZE, 597, Short.MAX_VALUE)
         );
         MODEstuLayout.setVerticalGroup(
             MODEstuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel55, javax.swing.GroupLayout.DEFAULT_SIZE, 425, Short.MAX_VALUE)
         );
 
         jPanel39.setBackground(new java.awt.Color(0, 153, 153));
@@ -1577,6 +2196,270 @@ public class DataBase extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
+        jPanel61.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel61.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel68.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel68.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel68.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel68.setText("K I L O M E T R O S");
+        jPanel61.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 190, 30));
+
+        crear_Profesor7.setBackground(new java.awt.Color(0, 102, 102));
+        crear_Profesor7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                crear_Profesor7MouseClicked(evt);
+            }
+        });
+
+        jLabel69.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
+        jLabel69.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel69.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel69.setText("R E G I S T R A R");
+        jLabel69.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel69MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel69MouseEntered(evt);
+            }
+        });
+
+        javax.swing.GroupLayout crear_Profesor7Layout = new javax.swing.GroupLayout(crear_Profesor7);
+        crear_Profesor7.setLayout(crear_Profesor7Layout);
+        crear_Profesor7Layout.setHorizontalGroup(
+            crear_Profesor7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(crear_Profesor7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel69, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        crear_Profesor7Layout.setVerticalGroup(
+            crear_Profesor7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel69, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        jPanel61.add(crear_Profesor7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 240, 30));
+
+        jPanel62.setBackground(new java.awt.Color(0, 102, 102));
+
+        jLabel70.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
+        jLabel70.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel70.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel70.setText("U S O  V E H I C U L O S");
+
+        javax.swing.GroupLayout jPanel62Layout = new javax.swing.GroupLayout(jPanel62);
+        jPanel62.setLayout(jPanel62Layout);
+        jPanel62Layout.setHorizontalGroup(
+            jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel62Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel70, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel62Layout.setVerticalGroup(
+            jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel70, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        jPanel61.add(jPanel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 300, 50));
+
+        cbIdEstu_Kilo.setBackground(new java.awt.Color(0, 102, 102));
+        cbIdEstu_Kilo.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
+        cbIdEstu_Kilo.setForeground(new java.awt.Color(204, 255, 255));
+        cbIdEstu_Kilo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbIdEstu_KiloActionPerformed(evt);
+            }
+        });
+        jPanel61.add(cbIdEstu_Kilo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 190, 40));
+
+        jLabel71.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel71.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel71.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel71.setText("I D   P R O F E S O R");
+        jPanel61.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, -1, 30));
+
+        cbIdProf_Kilo.setBackground(new java.awt.Color(0, 102, 102));
+        cbIdProf_Kilo.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
+        cbIdProf_Kilo.setForeground(new java.awt.Color(204, 255, 255));
+        cbIdProf_Kilo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbIdProf_KiloActionPerformed(evt);
+            }
+        });
+        jPanel61.add(cbIdProf_Kilo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 190, 40));
+
+        jLabel72.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel72.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel72.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel72.setText("I D   E S T U D I A N T E");
+        jPanel61.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 190, 30));
+
+        jPanel63.setBackground(new java.awt.Color(0, 102, 102));
+
+        kilometrosText.setBackground(new java.awt.Color(0, 102, 102));
+        kilometrosText.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
+        kilometrosText.setForeground(new java.awt.Color(204, 255, 255));
+        kilometrosText.setBorder(null);
+        kilometrosText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kilometrosTextActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel63Layout = new javax.swing.GroupLayout(jPanel63);
+        jPanel63.setLayout(jPanel63Layout);
+        jPanel63Layout.setHorizontalGroup(
+            jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel63Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(kilometrosText, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+        jPanel63Layout.setVerticalGroup(
+            jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel63Layout.createSequentialGroup()
+                .addComponent(kilometrosText, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel61.add(jPanel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 190, -1));
+
+        javax.swing.GroupLayout KilometrosLayout = new javax.swing.GroupLayout(Kilometros.getContentPane());
+        Kilometros.getContentPane().setLayout(KilometrosLayout);
+        KilometrosLayout.setHorizontalGroup(
+            KilometrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel61, javax.swing.GroupLayout.DEFAULT_SIZE, 523, Short.MAX_VALUE)
+        );
+        KilometrosLayout.setVerticalGroup(
+            KilometrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel61, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
+        );
+
+        jPanel64.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel64.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel75.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel75.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel75.setText("L I C E N C I A");
+        jPanel64.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 130, 30));
+
+        crear_Estudiante2.setBackground(new java.awt.Color(0, 102, 102));
+        crear_Estudiante2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                crear_Estudiante2MouseClicked(evt);
+            }
+        });
+
+        jLabel76.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
+        jLabel76.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel76.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel76.setText("C R E A R");
+        jLabel76.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel76MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout crear_Estudiante2Layout = new javax.swing.GroupLayout(crear_Estudiante2);
+        crear_Estudiante2.setLayout(crear_Estudiante2Layout);
+        crear_Estudiante2Layout.setHorizontalGroup(
+            crear_Estudiante2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, crear_Estudiante2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        crear_Estudiante2Layout.setVerticalGroup(
+            crear_Estudiante2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, crear_Estudiante2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel64.add(crear_Estudiante2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, 130, 30));
+
+        jPanel65.setBackground(new java.awt.Color(0, 102, 102));
+
+        jLabel77.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
+        jLabel77.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel77.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel77.setText("D O C U M E N T O S");
+
+        javax.swing.GroupLayout jPanel65Layout = new javax.swing.GroupLayout(jPanel65);
+        jPanel65.setLayout(jPanel65Layout);
+        jPanel65Layout.setHorizontalGroup(
+            jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel65Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel77))
+        );
+        jPanel65Layout.setVerticalGroup(
+            jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel65Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel77, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel64.add(jPanel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 230, 50));
+
+        jPanel66.setBackground(new java.awt.Color(0, 102, 102));
+
+        nombre_doc.setBackground(new java.awt.Color(0, 102, 102));
+        nombre_doc.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
+        nombre_doc.setForeground(new java.awt.Color(204, 255, 255));
+        nombre_doc.setBorder(null);
+        nombre_doc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nombre_docActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel66Layout = new javax.swing.GroupLayout(jPanel66);
+        jPanel66.setLayout(jPanel66Layout);
+        jPanel66Layout.setHorizontalGroup(
+            jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel66Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(nombre_doc, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+        jPanel66Layout.setVerticalGroup(
+            jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel66Layout.createSequentialGroup()
+                .addComponent(nombre_doc, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel64.add(jPanel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 180, 40));
+
+        cbLic_doc.setBackground(new java.awt.Color(0, 102, 102));
+        cbLic_doc.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
+        cbLic_doc.setForeground(new java.awt.Color(204, 255, 255));
+        cbLic_doc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbLic_docActionPerformed(evt);
+            }
+        });
+        jPanel64.add(cbLic_doc, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 190, 40));
+
+        jLabel79.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel79.setForeground(new java.awt.Color(204, 255, 255));
+        jLabel79.setText("NOMBRE DOC");
+        jPanel64.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 140, 30));
+
+        javax.swing.GroupLayout INSDocLayout = new javax.swing.GroupLayout(INSDoc.getContentPane());
+        INSDoc.getContentPane().setLayout(INSDocLayout);
+        INSDocLayout.setHorizontalGroup(
+            INSDocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel64, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 475, Short.MAX_VALUE)
+        );
+        INSDocLayout.setVerticalGroup(
+            INSDocLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel64, javax.swing.GroupLayout.DEFAULT_SIZE, 415, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
@@ -1716,7 +2599,12 @@ public class DataBase extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(204, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("j L a b e l 2");
+        jLabel6.setText("K I L O M E T R O S");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -1833,9 +2721,9 @@ public class DataBase extends javax.swing.JFrame {
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jTable1.setBackground(new java.awt.Color(0, 102, 102));
-        jTable1.setForeground(new java.awt.Color(204, 255, 255));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablas.setBackground(new java.awt.Color(0, 102, 102));
+        tablas.setForeground(new java.awt.Color(204, 255, 255));
+        tablas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
                 {null},
@@ -1868,11 +2756,11 @@ public class DataBase extends javax.swing.JFrame {
                 "Title 1"
             }
         ));
-        jTable1.setGridColor(new java.awt.Color(204, 255, 255));
-        jTable1.setSelectionBackground(new java.awt.Color(51, 255, 255));
-        jTable1.setSelectionForeground(new java.awt.Color(204, 255, 255));
-        jTable1.setSurrendersFocusOnKeystroke(true);
-        jScrollPane1.setViewportView(jTable1);
+        tablas.setGridColor(new java.awt.Color(204, 255, 255));
+        tablas.setSelectionBackground(new java.awt.Color(51, 255, 255));
+        tablas.setSelectionForeground(new java.awt.Color(204, 255, 255));
+        tablas.setSurrendersFocusOnKeystroke(true);
+        jScrollPane1.setViewportView(tablas);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 560, 430));
 
@@ -1944,7 +2832,7 @@ public class DataBase extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cb_tablasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_tablasActionPerformed
-        jTable1.setModel(TraerTabla(db.Select(cb_tablas.getSelectedItem().toString())));
+        tablas.setModel(TraerTabla(db.Select(cb_tablas.getSelectedItem().toString())));
     }//GEN-LAST:event_cb_tablasActionPerformed
 
     private void tipoLic_licenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tipoLic_licenciaActionPerformed
@@ -1991,15 +2879,12 @@ public class DataBase extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_pago_estudianteActionPerformed
 
-    private void cbProf_vehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbProf_vehiculoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbProf_vehiculoActionPerformed
-
     private void crear_LicenciaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crear_LicenciaMouseClicked
         ArrayList<Object> values = new ArrayList();
         values.add(tipoLic_licencia.getText());
         db.Insert(values, "licencia");
         JOptionPane.showMessageDialog(this, "Licencia Creado");
+        tablas.setModel(TraerTabla(db.Select(cb_tablas.getSelectedItem().toString())));
         ActualizarCB();
     }//GEN-LAST:event_crear_LicenciaMouseClicked
 
@@ -2010,6 +2895,7 @@ public class DataBase extends javax.swing.JFrame {
         values.add(nombre_profesor.getText());
         db.Insert(values, "profesor");
         JOptionPane.showMessageDialog(this, "Profesor Creado");
+        tablas.setModel(TraerTabla(db.Select(cb_tablas.getSelectedItem().toString())));
         ActualizarCB();
     }//GEN-LAST:event_crear_ProfesorMouseClicked
 
@@ -2023,6 +2909,7 @@ public class DataBase extends javax.swing.JFrame {
         values.add(cbLic_estudiante.getSelectedItem().toString());
         db.Insert(values, "alumno");
         JOptionPane.showMessageDialog(this, "Alumno Creado");
+        tablas.setModel(TraerTabla(db.Select(cb_tablas.getSelectedItem().toString())));
         ActualizarCB();
     }//GEN-LAST:event_crear_EstudianteMouseClicked
 
@@ -2033,6 +2920,7 @@ public class DataBase extends javax.swing.JFrame {
         values.add(cbProf_vehiculo.getSelectedItem().toString());
         db.Insert(values, "vehiculo");
         JOptionPane.showMessageDialog(this, "Vehiculo Creado");
+        tablas.setModel(TraerTabla(db.Select(cb_tablas.getSelectedItem().toString())));
         ActualizarCB();
     }//GEN-LAST:event_crear_VehiculoMouseClicked
 
@@ -2150,6 +3038,12 @@ public class DataBase extends javax.swing.JFrame {
             INSVehi.setVisible(true);
             INSEstu.setVisible(false);
         }
+        if("Documentacion".equals(cb_tablas.getSelectedItem().toString())){
+            INSDoc.pack();
+            INSDoc.setLocationRelativeTo(this);
+            INSDoc.setModal(true);
+            INSDoc.setVisible(true);
+        }
     }//GEN-LAST:event_insertarMouseClicked
 
     private void eliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eliminarMouseClicked
@@ -2196,10 +3090,25 @@ public class DataBase extends javax.swing.JFrame {
         db.Delete("profesor", Integer.parseInt(cbElim_prof.getSelectedItem().toString()));
         try{
         db.Delete("vehiculo", Integer.parseInt(cbElim_prof.getSelectedItem().toString()));
+        db.ElimConsumoVehiculo(Integer.parseInt(cbElim_prof.getSelectedItem().toString()));
+        tablas.setModel(TraerTabla(db.Select("alumno")));
+        for (int i = 0; i < tablas.getRowCount(); i++) {
+            ArrayList<Object> values = new ArrayList();
+            values.add(tablas.getValueAt(i, 1).toString());
+            values.add("null");
+            values.add( tablas.getValueAt(i, 3).toString());
+            values.add(Integer.parseInt(tablas.getValueAt(i, 4).toString()));
+            values.add(tablas.getValueAt(i, 5).toString());
+            if (tablas.getValueAt(i, 2).toString().equals(cbElim_prof.getSelectedItem().toString())) {
+                db.Update("alumno", Integer.parseInt(tablas.getValueAt(i, 0).toString()), values);
+                break;
+            }
+        }
         }catch(Exception e){
             
         }
         JOptionPane.showMessageDialog(this, "Profesor Eliminado");
+        tablas.setModel(TraerTabla(db.Select(cb_tablas.getSelectedItem().toString())));
         ActualizarCB();
     }//GEN-LAST:event_jLabel31MouseClicked
 
@@ -2210,6 +3119,7 @@ public class DataBase extends javax.swing.JFrame {
         values.add(nombre_profesor.getText());
         db.Insert(values, "profesor");
         JOptionPane.showMessageDialog(this, "Profesor Creado");
+        tablas.setModel(TraerTabla(db.Select(cb_tablas.getSelectedItem().toString())));
         ActualizarCB();
     }//GEN-LAST:event_jLabel10MouseClicked
 
@@ -2217,7 +3127,7 @@ public class DataBase extends javax.swing.JFrame {
         ArrayList<Object> values = new ArrayList();
         values.add(Integer.parseInt(cbProf_vehiculo.getSelectedItem().toString()));
         values.add(coste_vehiculo.getText());
-        values.add(cbProf_vehiculo.getSelectedItem().toString());
+        values.add(cbLic_vehiculo.getSelectedItem().toString());
         db.Insert(values, "vehiculo");
         JOptionPane.showMessageDialog(this, "Vehiculo Creado");
         ActualizarCB();
@@ -2228,6 +3138,7 @@ public class DataBase extends javax.swing.JFrame {
         values.add(tipoLic_licencia.getText());
         db.Insert(values, "licencia");
         JOptionPane.showMessageDialog(this, "Licencia Creado");
+        tablas.setModel(TraerTabla(db.Select(cb_tablas.getSelectedItem().toString())));
         ActualizarCB();
     }//GEN-LAST:event_jLabel20MouseClicked
 
@@ -2241,12 +3152,15 @@ public class DataBase extends javax.swing.JFrame {
         values.add(cbLic_estudiante.getSelectedItem().toString());
         db.Insert(values, "alumno");
         JOptionPane.showMessageDialog(this, "Alumno Creado");
+        tablas.setModel(TraerTabla(db.Select(cb_tablas.getSelectedItem().toString())));
         ActualizarCB();
     }//GEN-LAST:event_jLabel23MouseClicked
 
     private void jLabel33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel33MouseClicked
+        db.ElimConsumoVehiculo(Integer.parseInt(cbElim_vehi.getSelectedItem().toString()));
         db.Delete("vehiculo", Integer.parseInt(cbElim_vehi.getSelectedItem().toString()));
         JOptionPane.showMessageDialog(this, "Vehiculo Eliminado");
+        tablas.setModel(TraerTabla(db.Select(cb_tablas.getSelectedItem().toString())));
         ActualizarCB();
     }//GEN-LAST:event_jLabel33MouseClicked
 
@@ -2255,8 +3169,33 @@ public class DataBase extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel36MouseEntered
 
     private void jLabel36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel36MouseClicked
-        db.Delete("licencia", Integer.parseInt(cbElim_lice.getSelectedItem().toString()));
+        db.Delete("licencia", cbElim_lice.getSelectedItem().toString());
+        db.ElimDoc(cbElim_lice.getSelectedItem().toString());
+        tablas.setModel(TraerTabla(db.Select("vehiculo")));
+        for (int i = 0; i < tablas.getRowCount(); i++) {
+            ArrayList<Object> values = new ArrayList();
+            values.add(tablas.getValueAt(i, 1).toString());
+            values.add("null");
+            if (tablas.getValueAt(i, 2).toString().equals(cbElim_lice.getSelectedItem().toString())) {
+                db.Update("vehiculo", Integer.parseInt(tablas.getValueAt(i, 0).toString()), values);
+                break;
+            }
+        }
+        tablas.setModel(TraerTabla(db.Select("alumno")));
+        for (int i = 0; i < tablas.getRowCount(); i++) {
+            ArrayList<Object> values = new ArrayList();
+            values.add(tablas.getValueAt(i, 1).toString());
+            values.add(tablas.getValueAt(i, 2).toString());
+            values.add( tablas.getValueAt(i, 3).toString());
+            values.add(Integer.parseInt(tablas.getValueAt(i, 4).toString()));
+            values.add("null");
+            if (tablas.getValueAt(i, 5).toString().equals(cbElim_lice.getSelectedItem().toString())) {
+                db.Update("alumno", Integer.parseInt(tablas.getValueAt(i, 0).toString()), values);
+                break;
+            }
+        }
         JOptionPane.showMessageDialog(this, "Licencia Eliminado");
+        tablas.setModel(TraerTabla(db.Select(cb_tablas.getSelectedItem().toString())));
         ActualizarCB();
     }//GEN-LAST:event_jLabel36MouseClicked
 
@@ -2314,7 +3253,67 @@ public class DataBase extends javax.swing.JFrame {
     }//GEN-LAST:event_fecha_MatriculaActionPerformed
 
     private void modificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarMouseClicked
-        // TODO add your handling code here:
+        ActualizarCB();
+        int fila = tablas.getSelectedRow();
+        if(fila != -1){
+            if ("Licencia".equals(cb_tablas.getSelectedItem().toString())) {
+                JOptionPane.showMessageDialog(this, "No se puede modificar el unico atributo de Licencias");
+            }
+            if ("Alumno".equals(cb_tablas.getSelectedItem().toString())) {
+                MODEstu.pack();
+                MODEstu.setLocationRelativeTo(this);
+                MODEstu.setModal(true);
+                id_estudiante1.setText(tablas.getValueAt(fila, 0).toString());
+                apellido_estudiante1.setText(tablas.getValueAt(fila, 1).toString());
+                for (int i = 0; i < cbProf_estudianteMod.getItemCount(); i++) {
+                    if (cbProf_estudianteMod.getItemAt(i).equals(tablas.getValueAt(fila, 2).toString())) {
+                        cbProf_estudianteMod.setSelectedIndex(i);
+                        break;
+                    }
+                }
+                nombre_estudiante1.setText(tablas.getValueAt(fila, 3).toString());
+                pago_estudiante1.setText(tablas.getValueAt(fila, 4).toString());
+                for (int i = 0; i < cbLic_estudianteMod.getItemCount(); i++) {
+                    if (cbLic_estudianteMod.getItemAt(i).equals(tablas.getValueAt(fila, 5).toString())) {
+                        cbLic_estudianteMod.setSelectedIndex(i);
+                        break;
+                    }
+                }
+                MODProf.setVisible(false);
+                MODVehi.setVisible(false);
+                MODEstu.setVisible(true);
+            }
+            if ("Profesor".equals(cb_tablas.getSelectedItem().toString())) {
+                MODProf.pack();
+                MODProf.setLocationRelativeTo(this);
+                id_profesor1.setText(tablas.getValueAt(fila, 0).toString());
+                apellido_profesor1.setText(tablas.getValueAt(fila, 1).toString());
+                nombre_profesor1.setText(tablas.getValueAt(fila, 2).toString());
+                MODProf.setModal(true);
+                MODProf.setVisible(true);
+                MODVehi.setVisible(false);
+                MODEstu.setVisible(false);
+            }
+            if ("Vehiculo".equals(cb_tablas.getSelectedItem().toString())) {
+                MODVehi.pack();
+                MODVehi.setLocationRelativeTo(this);
+                id_vehiculo1.setText(tablas.getValueAt(fila, 0).toString());
+                coste_vehiculo1.setText(tablas.getValueAt(fila, 1).toString());
+                for (int i = 0; i < cbModLic_vehiculo.getItemCount(); i++) {
+                    if (cbModLic_vehiculo.getItemAt(i).equals(tablas.getValueAt(fila, 2).toString())) {
+                        cbModLic_vehiculo.setSelectedIndex(i);
+                        break;
+                    }
+                }
+                MODVehi.setModal(true);
+                MODProf.setVisible(false);
+                MODVehi.setVisible(true);
+                MODEstu.setVisible(false);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Seleccione una tupla de la tabla para modificar");
+        }
     }//GEN-LAST:event_modificarMouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
@@ -2369,6 +3368,173 @@ public class DataBase extends javax.swing.JFrame {
     private void fecha_ExamenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fecha_ExamenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fecha_ExamenActionPerformed
+
+    private void modificar_profMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificar_profMouseClicked
+        ArrayList<Object> values = new ArrayList();
+        values.add(apellido_profesor1.getText());
+        values.add(nombre_profesor1.getText());
+        db.Update("profesor", Integer.parseInt(id_profesor1.getText()), values);
+        MODProf.setVisible(false);
+        JOptionPane.showMessageDialog(this, "Se realizaron los cambios");
+        tablas.setModel(TraerTabla(db.Select(cb_tablas.getSelectedItem().toString())));
+        ActualizarCB();
+    }//GEN-LAST:event_modificar_profMouseClicked
+
+    private void mod_ProfesorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mod_ProfesorMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mod_ProfesorMouseClicked
+
+    private void id_profesor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_id_profesor1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_id_profesor1ActionPerformed
+
+    private void nombre_profesor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombre_profesor1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombre_profesor1ActionPerformed
+
+    private void apellido_profesor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apellido_profesor1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_apellido_profesor1ActionPerformed
+
+    private void modificarVehiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarVehiMouseClicked
+        ArrayList<Object> values = new ArrayList();
+        values.add(coste_vehiculo1.getText());
+        values.add(cbModLic_vehiculo.getSelectedItem().toString());
+        db.Update("vehiculo", Integer.parseInt(id_vehiculo1.getText()), values);
+        MODVehi.setVisible(false);
+        JOptionPane.showMessageDialog(this, "Se realizaron los cambios");
+        tablas.setModel(TraerTabla(db.Select(cb_tablas.getSelectedItem().toString())));
+        ActualizarCB();
+    }//GEN-LAST:event_modificarVehiMouseClicked
+
+    private void modificar_vehiculo1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificar_vehiculo1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificar_vehiculo1MouseClicked
+
+    private void id_vehiculo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_id_vehiculo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_id_vehiculo1ActionPerformed
+
+    private void coste_vehiculo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coste_vehiculo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_coste_vehiculo1ActionPerformed
+
+    private void jLabel33MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel33MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel33MouseEntered
+
+    private void cbModLic_vehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbModLic_vehiculoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbModLic_vehiculoActionPerformed
+
+    private void jLabel63MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel63MouseClicked
+        ArrayList<Object> values = new ArrayList();
+        values.add(apellido_estudiante1.getText());
+        values.add(cbProf_estudianteMod.getSelectedItem().toString());
+        values.add(nombre_estudiante1.getText());
+        values.add(Integer.parseInt(pago_estudiante1.getText()));
+        values.add(cbLic_estudianteMod.getSelectedItem().toString());
+        db.Update("alumno", Integer.parseInt(id_estudiante1.getText()), values);
+        MODEstu.setVisible(false);
+        JOptionPane.showMessageDialog(this, "Se realizaron los cambios");
+        tablas.setModel(TraerTabla(db.Select(cb_tablas.getSelectedItem().toString())));
+        ActualizarCB();
+    }//GEN-LAST:event_jLabel63MouseClicked
+
+    private void crear_Estudiante1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crear_Estudiante1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_crear_Estudiante1MouseClicked
+
+    private void id_estudiante1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_id_estudiante1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_id_estudiante1ActionPerformed
+
+    private void nombre_estudiante1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombre_estudiante1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombre_estudiante1ActionPerformed
+
+    private void apellido_estudiante1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apellido_estudiante1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_apellido_estudiante1ActionPerformed
+
+    private void cbLic_estudianteModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbLic_estudianteModActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbLic_estudianteModActionPerformed
+
+    private void cbProf_estudianteModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbProf_estudianteModActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbProf_estudianteModActionPerformed
+
+    private void pago_estudiante1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pago_estudiante1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pago_estudiante1ActionPerformed
+
+    private void cbProf_vehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbProf_vehiculoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbProf_vehiculoActionPerformed
+
+    private void jLabel69MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel69MouseClicked
+        ArrayList<Object> values = new ArrayList();
+        values.add(Integer.parseInt(cbIdProf_Kilo.getSelectedItem().toString()));
+        values.add(Integer.parseInt(cbIdEstu_Kilo.getSelectedItem().toString()));
+        values.add(kilometrosText.getText());
+        db.Insert(values, "consumovehiculo");
+        tablas.setModel(TraerTabla(db.Select(cb_tablas.getSelectedItem().toString())));
+        Kilometros.setVisible(false);
+        JOptionPane.showMessageDialog(this, "Kilometros registrados");
+        ActualizarCB();
+    }//GEN-LAST:event_jLabel69MouseClicked
+
+    private void jLabel69MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel69MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel69MouseEntered
+
+    private void crear_Profesor7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crear_Profesor7MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_crear_Profesor7MouseClicked
+
+    private void cbIdEstu_KiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbIdEstu_KiloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbIdEstu_KiloActionPerformed
+
+    private void cbIdProf_KiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbIdProf_KiloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbIdProf_KiloActionPerformed
+
+    private void kilometrosTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kilometrosTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_kilometrosTextActionPerformed
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        ActualizarCB();
+        Kilometros.pack();
+        Kilometros.setLocationRelativeTo(this);
+        Kilometros.setModal(true);
+        Kilometros.setVisible(true);
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel76MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel76MouseClicked
+        ArrayList<Object> values = new ArrayList();
+        values.add(nombre_doc.getText());
+        values.add(cbLic_doc.getSelectedItem().toString());
+        db.Insert(values, "documentacion");
+        tablas.setModel(TraerTabla(db.Select(cb_tablas.getSelectedItem().toString())));
+        Kilometros.setVisible(false);
+        JOptionPane.showMessageDialog(this, "Documento registrado");
+        ActualizarCB();
+    }//GEN-LAST:event_jLabel76MouseClicked
+
+    private void crear_Estudiante2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crear_Estudiante2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_crear_Estudiante2MouseClicked
+
+    private void nombre_docActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombre_docActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombre_docActionPerformed
+
+    private void cbLic_docActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbLic_docActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbLic_docActionPerformed
 
     public DefaultTableModel TraerTabla(ResultSet rs) {
         DefaultTableModel model = new DefaultTableModel();
@@ -2438,6 +3604,9 @@ public class DataBase extends javax.swing.JFrame {
             cbProf_estudiante.setModel(cbModProf);
             cbElim_prof.setModel(cbModProf);
             cbIdProf_Matricula.setModel(cbModProf);
+            cbProf_estudianteMod.setModel(cbModProf);
+            cbIdProf_Kilo.setModel(cbModProf);
+            
 
             //A L U M N O
             alum.forEach(rr -> {
@@ -2448,6 +3617,7 @@ public class DataBase extends javax.swing.JFrame {
             cbElim_estu.setModel(cbModEstu);
             cbIdEstu_Matricula.setModel(cbModEstu);
             cbIdEstu_Examen.setModel(cbModEstu);
+            cbIdEstu_Kilo.setModel(cbModEstu);
             
             ArrayList<Object> Disponibles2 = getArrayListDifference(idEstu, idMatri);
             for (Object Disponible : Disponibles2) {
@@ -2464,7 +3634,9 @@ public class DataBase extends javax.swing.JFrame {
             cbLic_estudiante.setModel(cbModLice);
             cbLic_vehiculo.setModel(cbModLice);
             cbElim_lice.setModel(cbModLice);
-
+            cbModLic_vehiculo.setModel(cbModLice);
+            cbLic_estudianteMod.setModel(cbModLice);
+            cbLic_doc.setModel(cbModLice);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -2528,33 +3700,46 @@ public class DataBase extends javax.swing.JFrame {
     private javax.swing.JDialog ELIMProf;
     private javax.swing.JDialog ELIMVehi;
     private javax.swing.JDialog Examen;
+    private javax.swing.JDialog INSDoc;
     private javax.swing.JDialog INSEstu;
     private javax.swing.JDialog INSLic;
     private javax.swing.JDialog INSProf;
     private javax.swing.JDialog INSVehi;
+    private javax.swing.JDialog Kilometros;
     private javax.swing.JDialog MODEstu;
     private javax.swing.JDialog MODLic;
     private javax.swing.JDialog MODProf;
     private javax.swing.JDialog MODVehi;
     private javax.swing.JDialog Matricular;
     private javax.swing.JTextField apellido_estudiante;
+    private javax.swing.JTextField apellido_estudiante1;
     private javax.swing.JTextField apellido_profesor;
+    private javax.swing.JTextField apellido_profesor1;
     private javax.swing.JComboBox<String> cbElim_estu;
     private javax.swing.JComboBox<String> cbElim_lice;
     private javax.swing.JComboBox<String> cbElim_prof;
     private javax.swing.JComboBox<String> cbElim_vehi;
     private javax.swing.JComboBox<String> cbIdEstu_Examen;
+    private javax.swing.JComboBox<String> cbIdEstu_Kilo;
     private javax.swing.JComboBox<String> cbIdEstu_Matricula;
+    private javax.swing.JComboBox<String> cbIdProf_Kilo;
     private javax.swing.JComboBox<String> cbIdProf_Matricula;
+    private javax.swing.JComboBox<String> cbLic_doc;
     private javax.swing.JComboBox<String> cbLic_estudiante;
+    private javax.swing.JComboBox<String> cbLic_estudianteMod;
     private javax.swing.JComboBox<String> cbLic_vehiculo;
+    private javax.swing.JComboBox<String> cbModLic_vehiculo;
     private javax.swing.JComboBox<String> cbProf_estudiante;
+    private javax.swing.JComboBox<String> cbProf_estudianteMod;
     private javax.swing.JComboBox<String> cbProf_vehiculo;
     private javax.swing.JComboBox<String> cbRep1_Examen;
     private javax.swing.JComboBox<String> cbRep2_Examen;
     private javax.swing.JComboBox<String> cb_tablas;
     private javax.swing.JTextField coste_vehiculo;
+    private javax.swing.JTextField coste_vehiculo1;
     private javax.swing.JPanel crear_Estudiante;
+    private javax.swing.JPanel crear_Estudiante1;
+    private javax.swing.JPanel crear_Estudiante2;
     private javax.swing.JPanel crear_Licencia;
     private javax.swing.JPanel crear_Profesor;
     private javax.swing.JPanel crear_Profesor1;
@@ -2563,13 +3748,17 @@ public class DataBase extends javax.swing.JFrame {
     private javax.swing.JPanel crear_Profesor4;
     private javax.swing.JPanel crear_Profesor5;
     private javax.swing.JPanel crear_Profesor6;
+    private javax.swing.JPanel crear_Profesor7;
     private javax.swing.JPanel crear_Vehiculo;
     private javax.swing.JLabel eliminar;
     private javax.swing.JTextField fecha_Examen;
     private javax.swing.JTextField fecha_Matricula;
     private javax.swing.JTextField id_Matricula;
     private javax.swing.JTextField id_estudiante;
+    private javax.swing.JTextField id_estudiante1;
     private javax.swing.JTextField id_profesor;
+    private javax.swing.JTextField id_profesor1;
+    private javax.swing.JTextField id_vehiculo1;
     private javax.swing.JLabel insertar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -2591,6 +3780,7 @@ public class DataBase extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
@@ -2611,6 +3801,7 @@ public class DataBase extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
@@ -2618,8 +3809,31 @@ public class DataBase extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -2662,18 +3876,48 @@ public class DataBase extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel43;
     private javax.swing.JPanel jPanel44;
     private javax.swing.JPanel jPanel45;
+    private javax.swing.JPanel jPanel46;
+    private javax.swing.JPanel jPanel47;
+    private javax.swing.JPanel jPanel48;
+    private javax.swing.JPanel jPanel49;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel50;
+    private javax.swing.JPanel jPanel51;
+    private javax.swing.JPanel jPanel52;
+    private javax.swing.JPanel jPanel53;
+    private javax.swing.JPanel jPanel54;
+    private javax.swing.JPanel jPanel55;
+    private javax.swing.JPanel jPanel56;
+    private javax.swing.JPanel jPanel57;
+    private javax.swing.JPanel jPanel58;
+    private javax.swing.JPanel jPanel59;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel60;
+    private javax.swing.JPanel jPanel61;
+    private javax.swing.JPanel jPanel62;
+    private javax.swing.JPanel jPanel63;
+    private javax.swing.JPanel jPanel64;
+    private javax.swing.JPanel jPanel65;
+    private javax.swing.JPanel jPanel66;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField kilometrosText;
+    private javax.swing.JPanel mod_Profesor;
     private javax.swing.JLabel modificar;
+    private javax.swing.JLabel modificarVehi;
+    private javax.swing.JLabel modificar_prof;
+    private javax.swing.JPanel modificar_vehiculo1;
     private javax.swing.JLabel nombreTabla;
+    private javax.swing.JTextField nombre_doc;
     private javax.swing.JTextField nombre_estudiante;
+    private javax.swing.JTextField nombre_estudiante1;
     private javax.swing.JTextField nombre_profesor;
+    private javax.swing.JTextField nombre_profesor1;
     private javax.swing.JTextField pago_estudiante;
+    private javax.swing.JTextField pago_estudiante1;
+    private javax.swing.JTable tablas;
     private javax.swing.JTextField tipoLic_licencia;
     // End of variables declaration//GEN-END:variables
 }
